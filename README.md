@@ -35,3 +35,11 @@ Where $A_i$ is the area of each individual shape and $(x_i, y_i)$ are the coordi
 ```bash
    git clone https://github.com/keyvanhajahmadi/structural-section-centroid.git
    
+## 📖 How to Use
+After running `main.py`, follow the prompts:
+1. Enter the number of sub-shapes in your composite section.
+2. For each shape, provide:
+   - **Type:** (e.g., Rectangle, Circle)
+   - **Dimensions:** (Width, Height or Radius)
+   - **Coordinates:** (x, y) of the shape's own centroid.
+3. The program will automatically compute the global centroid.
