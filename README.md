@@ -33,5 +33,5 @@ Where $A_i$ is the area of each individual shape and $(x_i, y_i)$ are the coordi
 
 1. **Clone the repository:**
 ```bash
-   git clone https://github.com/YOUR_USERNAME/structural-section-centroid.git
+   git clone https://github.com/keyvanhajahmadi/structural-section-centroid.git
    
