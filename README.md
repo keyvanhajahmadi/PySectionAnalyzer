@@ -46,4 +46,19 @@ After running `main.py`, follow the prompts:
    - **Dimensions:** (Width, Height or Radius)
    - **Coordinates:** (x, y) of the shape's own centroid.
 3. The program will automatically compute the global centroid.
+---
+## 📊 Example Calculation
+Suppose we have a T-section:
+- **Flange:** 200x20 mm
+- **Web:** 20x150 mm
+
+**Output:**
+- Total Area: 7000 mm²
+- Neutral Axis (Ȳ): 112.5 mm from the base.
+---
+## 📑 Documentation
+- `calculate_area()`: Computes the area based on shape type.
+- `sum_moments()`: Calculates $\sum (A \cdot x)$ and $\sum (A \cdot y)$.
+- `get_centroid()`: Returns the final $(X, Y)$ coordinates.
+
 
