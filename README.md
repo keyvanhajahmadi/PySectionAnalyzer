@@ -1,71 +1,84 @@
-# structural-section-centroid
-Python tool for calculating the centroid of composite sections used in civil and structural engineering.
-# 🏗️ Structural Section Centroid Calculator
-- **Graphical User Interface (GUI):** Built with Tkinter for a user-friendly experience.
-- **Advanced Computation:** Utilizes SciPy for high-performance engineering calculations.
+# PyStruct Analyzer
 
+![Banner](banner.png)
 
-![Structural Engineering Banner](./banner.png)
+**PyStruct Analyzer** is a Python-based structural engineering toolkit designed to perform section property calculations and structural analysis within a simple graphical interface.
 
-## 📌 Project Overview
-This Python-based engineering tool is designed to calculate the **Centroid (X̄, Ȳ)** of composite structural sections. Understanding the centroidal axis is fundamental for calculating the Moment of Inertia, Section Modulus, and overall structural stability in civil engineering design.
-
-This project was developed during my undergraduate studies at **Shahid Bahonar University of Kerman** to bridge the gap between theoretical structural mechanics and computational engineering.
+The goal of this project is to bridge classical structural engineering concepts with computational tools, allowing engineers and students to analyze structural components quickly and efficiently.
 
 ---
 
-## 🖥️ User Interface
-![App Screenshot](./screenshot.png)
+# Features
+
+## Section Analysis
+Calculate geometric properties of structural sections:
+
+- Area
+- Centroid (X̄ , Ȳ)
+- Second Moment of Area (Ixx, Iyy)
+- Polar Moment of Inertia
+- Section Modulus
+- Composite section support
+
+Supports multiple shapes such as:
+
+- Rectangle
+- Triangle
+- Circle
+
+Composite sections can include both **added areas and holes**.
 
 ---
 
-## 🚀 Key Features
-- **Multi-Shape Support:** Handles Rectangles, Triangles, and Circles.
-- **Composite Analysis:** Supports addition and subtraction (holes/cutouts) of areas.
-- **Precision:** High-accuracy coordinate calculation for complex geometries.
-- **Clean Architecture:** Built using modular Python functions for easy scalability.
+## Structural Analysis
+
+### 2D Truss Solver
+
+The truss module is based on the **Direct Stiffness Method**, widely used in structural engineering software.
+
+Capabilities include:
+
+- Global stiffness matrix assembly
+- Node displacement calculation
+- Support reaction calculation
+- Member axial force calculation
+- Tension / Compression detection
+
+Mathematical formulation:
+
+F = K × U
+
+Where
+
+- F = force vector
+- K = global stiffness matrix
+- U = displacement vector
 
 ---
 
-## 🛠️ Mathematical Background
-The program utilizes the first moment of area principle:
+# Graphical User Interface
 
-$$ \bar{X} = \frac{\sum (A_i \cdot x_i)}{\sum A_i} $$
-$$ \bar{Y} = \frac{\sum (A_i \cdot y_i)}{\sum A_i} $$
+The application includes a lightweight GUI built using **Tkinter**, enabling engineers to:
 
-Where $A_i$ is the area of each individual shape and $(x_i, y_i)$ are the coordinates of their respective centroids.
+- Input geometry and structural parameters
+- Perform calculations instantly
+- View organized results
 
 ---
 
-## 💻 Installation & Usage
+# Technology Stack
 
-1. Clone the repo...
-2. Install dependencies:
+Python  
+NumPy  
+SciPy  
+Tkinter
+
+These libraries allow efficient matrix computations and numerical solving for structural systems.
+
+---
+
+# Installation
+
+Clone the repository:
 ```bash
-   pip install -r requirements.txt
-```
----
-## 📖 How to Use
-After running `main.py`, follow the prompts:
-1. Enter the number of sub-shapes in your composite section.
-2. For each shape, provide:
-   - **Type:** (e.g., Rectangle, Circle)
-   - **Dimensions:** (Width, Height or Radius)
-   - **Coordinates:** (x, y) of the shape's own centroid.
-3. The program will automatically compute the global centroid.
----
-## 📊 Example Calculation
-Suppose we have a T-section:
-- **Flange:** 200x20 mm
-- **Web:** 20x150 mm
-
-**Output:**
-- Total Area: 7000 mm²
-- Neutral Axis (Ȳ): 112.5 mm from the base.
----
-## 📑 Documentation
-- `calculate_area()`: Computes the area based on shape type.
-- `sum_moments()`: Calculates $\sum (A \cdot x)$ and $\sum (A \cdot y)$.
-- `get_centroid()`: Returns the final $(X, Y)$ coordinates.
-
-
+git clone https://github.com/YOUR_USERNAME/PyStruct-Analyzer.git
