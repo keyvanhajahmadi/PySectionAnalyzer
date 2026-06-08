@@ -15,9 +15,10 @@ This project was developed during my undergraduate studies at **Shahid Bahonar U
 ---
 
 ## 🖥️ User Interface
-   ![App Screenshot](./Screenshot 2026-06-08 151858.png)
+![App Screenshot](./screenshot.png)
 
 ---
+
 ## 🚀 Key Features
 - **Multi-Shape Support:** Handles Rectangles, Triangles, and Circles.
 - **Composite Analysis:** Supports addition and subtraction (holes/cutouts) of areas.
