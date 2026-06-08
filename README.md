@@ -38,7 +38,7 @@ Where $A_i$ is the area of each individual shape and $(x_i, y_i)$ are the coordi
 2. Install dependencies:
 ```bash
    pip install -r requirements.txt
-
+```
 ---
 ## 📖 How to Use
 After running `main.py`, follow the prompts:
