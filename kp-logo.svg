@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bgG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0e1e35"/>
+      <stop offset="100%" style="stop-color:#071220"/>
+    </linearGradient>
+    <linearGradient id="goldG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4c94a"/>
+      <stop offset="100%" style="stop-color:#c8860a"/>
+    </linearGradient>
+    <linearGradient id="blueG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a9fe1"/>
+      <stop offset="100%" style="stop-color:#1a5f9a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="190" fill="url(#bgG)"/>
+  <circle cx="200" cy="200" r="190" fill="none" stroke="url(#goldG)" stroke-width="3"/>
+  <circle cx="200" cy="200" r="178" fill="none" stroke="#1e3a60" stroke-width="1"/>
+
+  <!-- ===== TRUSS STRUCTURE inside logo ===== -->
+  <g filter="url(#shadow)">
+    <!-- Bottom chord -->
+    <line x1="70" y1="270" x2="330" y2="270" stroke="url(#blueG)" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Top chord -->
+    <line x1="110" y1="175" x2="290" y2="175" stroke="url(#blueG)" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Verticals -->
+    <line x1="155" y1="175" x2="155" y2="270" stroke="#2a7fc1" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="200" y1="175" x2="200" y2="270" stroke="#2a7fc1" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="245" y1="175" x2="245" y2="270" stroke="#2a7fc1" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- Diagonals -->
+    <line x1="110" y1="270" x2="155" y2="175" stroke="#2a7fc1" stroke-width="3" stroke-linecap="round"/>
+    <line x1="155" y1="270" x2="200" y2="175" stroke="#2a7fc1" stroke-width="3" stroke-linecap="round"/>
+    <line x1="245" y1="175" x2="200" y2="270" stroke="#2a7fc1" stroke-width="3" stroke-linecap="round"/>
+    <line x1="245" y1="270" x2="290" y2="175" stroke="#2a7fc1" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Left incline -->
+    <line x1="70" y1="270" x2="110" y2="175" stroke="url(#blueG)" stroke-width="4" stroke-linecap="round"/>
+    <!-- Right incline -->
+    <line x1="330" y1="270" x2="290" y2="175" stroke="url(#blueG)" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Tension diagonals (gold) -->
+    <line x1="110" y1="175" x2="155" y2="270" stroke="url(#goldG)" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="200" y1="270" x2="245" y2="175" stroke="url(#goldG)" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="290" y1="270" x2="245" y2="175" stroke="url(#goldG)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  </g>
+
+  <!-- Nodes (joints) -->
+  <g filter="url(#glow)">
+    <!-- Bottom nodes -->
+    <circle cx="70"  cy="270" r="7" fill="url(#goldG)"/>
+    <circle cx="110" cy="270" r="6" fill="#4a9fe1"/>
+    <circle cx="155" cy="270" r="6" fill="#4a9fe1"/>
+    <circle cx="200" cy="270" r="6" fill="#4a9fe1"/>
+    <circle cx="245" cy="270" r="6" fill="#4a9fe1"/>
+    <circle cx="290" cy="270" r="6" fill="#4a9fe1"/>
+    <circle cx="330" cy="270" r="7" fill="url(#goldG)"/>
+
+    <!-- Top nodes -->
+    <circle cx="110" cy="175" r="6" fill="#4a9fe1"/>
+    <circle cx="155" cy="175" r="6" fill="#4a9fe1"/>
+    <circle cx="200" cy="175" r="7" fill="url(#goldG)"/>
+    <circle cx="245" cy="175" r="6" fill="#4a9fe1"/>
+    <circle cx="290" cy="175" r="6" fill="#4a9fe1"/>
+  </g>
+
+  <!-- Support triangles -->
+  <g fill="url(#goldG)" opacity="0.85">
+    <polygon points="70,278 55,302 85,302"/>
+    <polygon points="330,278 315,302 345,302"/>
+  </g>
+  <!-- Ground lines -->
+  <line x1="48" y1="302" x2="92" y2="302" stroke="url(#goldG)" stroke-width="2" opacity="0.7"/>
+  <line x1="313" y1="302" x2="347" y2="302" stroke="url(#goldG)" stroke-width="2" opacity="0.7"/>
+
+  <!-- Force arrow (downward on center top node) -->
+  <g filter="url(#glow)">
+    <line x1="200" y1="140" x2="200" y2="168" stroke="url(#goldG)" stroke-width="3"/>
+    <polygon points="200,175 193,158 207,158" fill="url(#goldG)"/>
+  </g>
+
+  <!-- ===== KP TEXT ===== -->
+  <g filter="url(#glow)">
+    <text x="200" y="358"
+      font-family="'Georgia', serif"
+      font-size="52"
+      font-weight="900"
+      fill="url(#goldG)"
+      text-anchor="middle"
+      letter-spacing="8">KP</text>
+  </g>
+
+  <!-- Tagline -->
+  <text x="200" y="378"
+    font-family="'Courier New', monospace"
+    font-size="10"
+    fill="#4a9fe1"
+    text-anchor="middle"
+    letter-spacing="3"
+    opacity="0.8">TRUSS ANALYZER</text>
+
+  <!-- Top label -->
+  <text x="200" y="52"
+    font-family="'Courier New', monospace"
+    font-size="10"
+    fill="#7ab3d4"
+    text-anchor="middle"
+    letter-spacing="3"
+    opacity="0.7">AVAN ENGINEERING</text>
+
+  <!-- Decorative arcs -->
+  <path d="M 60,200 A 140,140 0 0,1 340,200" fill="none" stroke="#1e3a60" stroke-width="1" stroke-dasharray="4,6" opacity="0.5"/>
+
+</svg>
