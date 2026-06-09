@@ -81,4 +81,4 @@ These libraries allow efficient matrix computations and numerical solving for st
 
 Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/PyStruct-Analyzer.git
+git clone https://github.com/keyvanhajahmadi/PyStruct-Analyzer.git
